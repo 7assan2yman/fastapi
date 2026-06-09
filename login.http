@@ -1,0 +1,9 @@
+POST {{url}}/login
+Content-Type: application/x-www-form-urlencoded
+
+username=one@g.com&password=f
+
+> {%
+    // response.body is already a JavaScript object (automatically parsed)
+    client.global.set("token", response.body.access_token);
+%}

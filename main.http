@@ -1,0 +1,36 @@
+###Post a new post
+POST {{url}}/posts/
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "ninth post",
+  "content": "This is the content"
+}
+### Get all posts
+GET {{url}}/posts/?search=fuck%20me
+Authorization: Bearer {{token}}
+### Get a post by id
+GET {{url}}/posts/3
+Authorization: Bearer {{token}}
+### Delete a post by id
+DELETE {{url}}/posts/5
+Authorization: Bearer {{token}}
+### Update a post by id
+PUT {{url}}/posts/6
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "title": "fuck me",
+  "content": "Please"
+}
+### vote
+POST {{url}}/vote/
+Content-Type: application/json
+Authorization: Bearer {{token}}
+
+{
+  "post_id": 11,
+  "dir": 1
+}
